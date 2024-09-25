@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+root {
+    --displayFont: 'Instrument Serif', serif;
+    --bodyFont: 'Inter', sans-serif;
+    --lightColor: rgba(255, 229, 229, 1);
+    --darkColor: rgba(13, 13, 13, 1);
+    --primaryColor: rgba(64, 108, 196, 1);
+    --primaryColor-75: rgba(64, 108, 196, 0.75);
+    --primaryColor-50: rgba(64, 108, 196, 0.50);
+    --secondaryColor: rgba(196, 121, 64, 1);
+    --secondaryColor-75: rgba(196, 121, 64, 0.75);
+    --secondaryColor-50: rgba(196, 121, 64, 0.50);
+    --h1: 8rem;
+    --h2: 6rem;
+    --h3: 4rem;
+}
+
+html {
+    font-family: var(--bodyFont);
+    background-color: var(--lightColor);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
