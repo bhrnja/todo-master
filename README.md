@@ -1,2 +1,3 @@
-# todo-master
- A simple TODO list web app project
+# TODO Master
+
+A simple TODO list web app project.
