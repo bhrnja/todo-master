@@ -18,7 +18,17 @@
         <div class="taskList">
             <div class="taskItem">
                 <input type="text" name="task-input" id="task" placeholder="What shall I do today...">
-                <button class="addBtn" id="addTask"><i class="fa-regular fa-square-plus"></i></button>
+                <button id="addTask"><i class="fa-regular fa-square-plus"></i></button>
+            </div>
+            <div class="taskItem checkTask">
+                <input type="checkbox" name="check-input" id="checkTask">
+                <label for="check-input">Take out the trash @ 9am.</label>
+                <button id="rmvTask"><i class="fa-regular fa-square-minus"></i></button>
+            </div>
+            <div class="taskItem checkTask">
+                <input type="checkbox" checked name="check-input" id="checkedTask">
+                <label for="check-input"><s>Study for Spanish final exam.</s></label>
+                <button id="rmvTask"><i class="fa-regular fa-square-minus"></i></button>
             </div>
         </div>
     </div>
