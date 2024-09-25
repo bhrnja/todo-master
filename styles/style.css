@@ -1,3 +1,5 @@
+@import url("font.css");
+
 *,
 *::before,
 *::after {
@@ -6,25 +8,23 @@
   box-sizing: border-box;
 }
 
-root {
-    --displayFont: 'Instrument Serif', serif;
-    --bodyFont: 'Inter', sans-serif;
-    --lightColor: rgba(255, 229, 229, 1);
-    --darkColor: rgba(13, 13, 13, 1);
-    --primaryColor: rgba(64, 108, 196, 1);
-    --primaryColor-75: rgba(64, 108, 196, 0.75);
-    --primaryColor-50: rgba(64, 108, 196, 0.50);
-    --secondaryColor: rgba(196, 121, 64, 1);
-    --secondaryColor-75: rgba(196, 121, 64, 0.75);
-    --secondaryColor-50: rgba(196, 121, 64, 0.50);
-    --h1: 8rem;
-    --h2: 6rem;
-    --h3: 4rem;
+:root {
+    --light-color: rgb(246, 235, 235);
+    --dark-color: rgba(13, 13, 13, 1);
+    --dark-color-75: rgba(13, 13, 13, 0.75);
+    --dark-color-50: rgba(13, 13, 13, 0.50);
+    --primary-color: rgba(64, 108, 196, 1);
+    --primary-color-75: rgba(64, 108, 196, 0.75);
+    --primary-color-50: rgba(64, 108, 196, 0.50);
+    --secondary-color: rgba(196, 121, 64, 1);
+    --secondary-color-75: rgba(196, 121, 64, 0.75);
+    --secondary-color-50: rgba(196, 121, 64, 0.50);
 }
 
 html {
-    font-family: var(--bodyFont);
-    background-color: var(--lightColor);
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,16 +33,81 @@ html {
 }
 
 .container {
-    width: 70vw;
+    width: 50vw;
     height: 50vh;
-    background-color: var(--lightColor);
+    background-color: var(--light-color);
     box-shadow: 0 0 4rem 1rem #00000010;
     border-radius: 1rem;
+    padding: 2rem;
 }
 
-@media screen and (max-width :900px) {
+@media screen and (max-width :1200px) {
     .container {
         width: 90vw;
         height: 70vh;
     }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    width: 3rem;
+    display: block;
+}
+
+.logo + h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 6rem;
+    font-style: italic;
+}
+
+@media screen and (max-width :768px) {
+    .logo + h1 {
+        font-size: 4rem;
+    }
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.taskItem {
+    background-color: var(--light-color);
+    border: .20rem solid;
+    border-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center
+    
+}
+
+.taskItem > input {
+    border: none;
+    background-color: transparent;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    outline: none;
+    flex: 1;
+}
+.taskItem > button {
+    padding: .25rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--dark-color)
+}
+.taskItem > button:hover {
+    color: var(--dark-color-50);
+}
+
+.taskItem > button:active {
+    color: var(--dark-color-75);
 }

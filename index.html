@@ -6,11 +6,21 @@
     <title>TODO Master</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/font.css">
+    <script src="https://kit.fontawesome.com/0b849c322b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <div class="container">
-        
+        <div class="header">
+            <img src="./icons/todo-list.svg" alt="An outlined icon of a checklist." class="logo">
+            <h1>TODO Master</h1>
+        </div>
+        <div class="taskList">
+            <div class="taskItem">
+                <input type="text" name="task-input" id="task" placeholder="What shall I do today...">
+                <button class="addBtn" id="addTask"><i class="fa-regular fa-square-plus"></i></button>
+            </div>
+        </div>
     </div>
 
     <script src="./scripts/main.js"></script>
