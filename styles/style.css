@@ -31,3 +31,18 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+.container {
+    width: 70vw;
+    height: 50vh;
+    background-color: var(--lightColor);
+    box-shadow: 0 0 4rem 1rem #00000010;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width :900px) {
+    .container {
+        width: 90vw;
+        height: 70vh;
+    }
+}
